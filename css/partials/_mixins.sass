@@ -1,0 +1,33 @@
+=google-font($font)
+  $font: unquote($font)
+  @import url("http://fonts.googleapis.com/css?family=#{$font}")
+=warning
+  background-color: orange
+  color: #fff
+
+=box-shadow($shadows...)
+  box-shadow: $shadows
+  -moz-box-shadow: $shadows
+  -webkit-box-shadow: $shadows
+
+=apply-to-ie-6
+  * html
+    @content
+
+=large-text
+  font:
+    size: 22px
+    weight: bold
+
+=rounded($radius: 6px)
+  border-radius: $radius
+
+=box($radius: 6px, $border: 1px solid #000)
+  +rounded($radius)
+  border: $border
+
+=fancy-links
+  a
+    font-style: italic
+    text-decoration: none
+
